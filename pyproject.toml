@@ -1,0 +1,18 @@
+[project]
+name = "job-search-agents"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["jobhunting-core", "jobhunting-apply", "jobhunting-discover", "jobhunting-screen", "jobhunting-tailor"]
+
+[dependency-groups]
+dev = ["pytest>=8.4,<9"]
+
+[tool.uv.workspace]
+members = ["core", "apply-job", "discover-job", "screen-job", "tailor-resume"]
+
+[tool.uv.sources]
+jobhunting-core = { workspace = true }
+jobhunting-apply = { workspace = true }
+jobhunting-discover = { workspace = true }
+jobhunting-screen = { workspace = true }
+jobhunting-tailor = { workspace = true }

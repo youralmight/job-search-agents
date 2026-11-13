@@ -1,0 +1,2 @@
+# The campaign Google Sheet every workflow reads and writes.
+spreadsheet_id = "YOUR_SPREADSHEET_ID"

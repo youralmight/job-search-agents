@@ -1,0 +1,23 @@
+[project]
+name = "jobhunting-core"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+  "google-api-python-client>=2.181,<3",
+  "google-auth>=2.40,<3",
+  "google-auth-httplib2>=0.2,<1",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.4,<9"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jobhunting_core"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

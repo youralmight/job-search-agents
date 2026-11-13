@@ -1,0 +1,28 @@
+[project]
+name = "jobhunting-discover"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+  "beautifulsoup4>=4.15.0",
+  "jobhunting-core",
+  "python-jobspy",
+  "requests>=2.34.2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.4,<9"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jobhunting_discover"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.uv.sources]
+jobhunting-core = { workspace = true }
+python-jobspy = { git = "https://github.com/speedyapply/JobSpy.git", rev = "main" }
