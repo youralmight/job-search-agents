@@ -3,6 +3,7 @@
 A multi-agent pipeline I built and used for my own new-grad job search in 2026. LLM agents find
 postings, screen them against written rules, tailor a fact-checked one-page résumé for each, and fill
 the application form up to the final review page. I review every application and click Submit myself.
+Each filled form ends with a review note to me, like [this example](docs/review-note-example.md).
 
 By late October 2026 it tracked about 1,200 postings in one Google Sheet. That Sheet is the system's
 only lasting state.
