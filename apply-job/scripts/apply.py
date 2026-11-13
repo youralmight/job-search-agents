@@ -72,7 +72,6 @@ def fill(slots=8, limit=None, job_ids_file=None):
                                      '--title', title, '--json'))['workspaceId']
             output = state.job_dir(job_id)
             output.mkdir(parents=True, exist_ok=True, mode=0o700)
-            # The worker's skill, .agents/skills/apply-job/SKILL.md, is not published in this repository
             prompt = f'''You are an Apply worker. First read .agents/skills/apply-job/SKILL.md in full.
 Job ID: {job_id}
 Task: fill in this job's application form and stop before the final submission, leaving it for the user to review; click final submit only where the skill's "submit on the user's behalf" rule allows it.

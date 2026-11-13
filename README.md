@@ -32,9 +32,9 @@ behind a check:
 | Concurrent workers overwrite each other | One machine-wide lock per workbook. Columns are found by key, so I can reorder or hide them. | `core/src/jobhunting_core/sheet.py` |
 | A résumé claims something untrue | A writer agent edits the master CV. Code first enforces the hard rules: one page, no changes to employers, dates or education, no hidden text, and (if configured) the key results still present. Then a separate checker agent verifies each changed claim against my career records; failures get one rework round. My career repository must be unchanged afterwards. | `tailor-resume/src/jobhunting_tailor/` |
 | Private identity values leak | Passport and similar values live outside Git and are read only when a form asks. Once a job's form has used one, any state change or column update for that job containing the value is refused. | `core/src/jobhunting_core/private_identity.py` |
-| An application goes out unreviewed | Workers stop at the form's final review page and send me a review note. I submit, or I tell that one worker in its own session to submit. | Apply worker prompt and instructions (see below) |
+| An application goes out unreviewed | Workers stop at the form's final review page and send me a review note. I submit, or I tell that one worker in its own session to submit. | `apply-job/.agents/skills/apply-job/SKILL.md` |
 
-The last control is an instruction plus the workflow stopping at the review page. It is not a
+The last control is the worker's written rules plus the workflow stopping at the review page. It is not a
 technical lock on the Submit button. The log does record every agent move to `Submitted`, with
 the state it came from.
 
@@ -56,7 +56,8 @@ This is a cleaned-up copy of my working repository, without its git history:
   from the JSON endpoints behind some career sites (Workday and others), and from Indeed through JobSpy.
 
 **Left out on purpose:** my personal documents (screening criteria, search strategy, career facts), the
-browser-agent collection from job boards, the form-filling worker's instructions, and deployment units.
+browser-agent collection from job boards, the form-filling helper scripts and account setup, and
+deployment units. The form-filling worker's rules are included, with those details removed.
 `docs/screening-rules.md` is a generic example.
 
 Each job has one state in the Sheet:
