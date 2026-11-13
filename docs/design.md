@@ -5,9 +5,33 @@
 Apply to every new-grad role that fits my written screening rules, with each application reviewed by
 me, while my own time goes only to reviewing and submitting.
 
-The bottleneck turned out to be form filling and my review, not finding jobs. On 2026-10-26 the Sheet
-held about 1,200 postings, with 189 waiting for a form and 43 submitted. So each change was judged by one
-question: does it cut wasted form work, make review faster, or reduce how often I have to step in?
+The bottleneck turned out to be form filling and my review, not finding jobs (see "Where the postings
+went" below). So each change was judged by one question: does it cut wasted form work, make review faster, or reduce how often I have to step in?
+
+## Where the postings went
+
+The Jobs tab on 2026-11-13, with 2,301 postings collected since 2026-09-18:
+
+| State | Rows |
+|---|---|
+| `Submitted` | 229 |
+| `Ready to fill`: résumé tailored, waiting for a form worker and my review | 239 |
+| `AI recommends` / `Apply`: waiting for tailoring | 320 |
+| `Skip`: 180 excluded by rescreening after the rules changed; most of the rest carried over from an earlier version of the system or set by me | 935 |
+| `Duplicate` | 358 |
+| `Closed` | 220 |
+
+The two halves mean different things:
+
+- **Filtering.** The 1,513 `Duplicate`, `Skip` and `Closed` rows were copies of another posting,
+  failed the rules when they changed, closed before filling, or were turned down by me.
+- **The bottleneck.** The 559 rows waiting for tailoring or a form are queued behind form filling and
+  my review. Each form means registering an account, verifying an email and filling several pages.
+  The worker stops whenever a CAPTCHA or a question needs me, and every application waits for me to
+  read its review note and submit. Filling runs only when I start it.
+
+So the number of submitted applications measures how much review time I had, not how selective
+screening was.
 
 ## Non-goals
 

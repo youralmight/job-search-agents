@@ -5,8 +5,8 @@ postings, screen them against written rules, tailor a fact-checked one-page rés
 the application form up to the final review page. I review every application and click Submit myself.
 Each filled form ends with a review note to me, like [this example](docs/review-note-example.md).
 
-By late October 2026 it tracked about 1,200 postings in one Google Sheet. That Sheet is the system's
-only lasting state.
+By mid-November 2026 it had collected about 2,300 postings and I had submitted 229 applications, all
+tracked in one Google Sheet. That Sheet is the system's only lasting state.
 
 ```mermaid
 flowchart LR
