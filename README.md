@@ -83,8 +83,8 @@ cd core && uv run --group dev python -m pytest   # likewise screen-job, tailor-r
 ```
 
 Running the pipeline itself needs a Google Sheet with the expected tabs, the Paseo CLI, Chrome with
-remote debugging and the `agent-browser` CLI, and a local Bitwarden `bw serve` for credentials. Settings are in `.env`
-and `campaign.toml`. It was built for my own machine, not as a turnkey tool.
+remote debugging and the `agent-browser` CLI, and a local Bitwarden `bw serve` for credentials. Copy `.env.example` to `.env`
+for your settings; the spreadsheet ID goes in `campaign.toml`. It was built for my own machine, not as a turnkey tool.
 
 ## How it was built
 

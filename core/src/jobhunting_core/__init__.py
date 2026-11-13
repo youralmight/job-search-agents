@@ -1,10 +1,11 @@
-"""Shared infrastructure of the job-hunting workflows. Importing it loads the repository's .env into the
-environment; a variable the caller already set wins."""
+"""Shared infrastructure of the job-hunting workflows. Importing it loads the repository's .env (or, without one,
+.env.example) into the environment; a variable the caller already set wins."""
 import os
 from pathlib import Path
 
 _ROOT = Path(__file__).resolve().parents[3]
-for _line in (_ROOT / ".env").read_text().splitlines():
+_SETTINGS = _ROOT / ".env" if (_ROOT / ".env").exists() else _ROOT / ".env.example"
+for _line in _SETTINGS.read_text().splitlines():
     if _line.strip() and not _line.lstrip().startswith("#"):
         _key, _value = _line.split("=", 1)
         os.environ.setdefault(_key.strip(), _value.strip())
